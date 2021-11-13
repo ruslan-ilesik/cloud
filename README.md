@@ -1,5 +1,5 @@
 # cloud
-my cloud with website using python for server, bootstrap5 for client and Mysql 8 as data base:
+my cloud with website using python3.8 for server, bootstrap5 for client and Mysql 8 as data base:
 
 **HOW TO SETUP:**
 
@@ -7,4 +7,5 @@ my cloud with website using python for server, bootstrap5 for client and Mysql 8
 2)input your data in ```./cloud/server/data.py```
 3)Start server from cloud directory (example: ```pyton3 ./server/main.py```)
  
- 
+[main page:](https://cloud.lesikr.com)
+[share page example:](http://cloud.lesikr.com/share?default_path=/&id=preview)
