@@ -57,6 +57,7 @@ function make_preview(e){
 
     let type = this.children[0].className.split('-')[0]
     let filename = this.children[1].children[0].innerHTML
+    let size = document.getElementById('size_'+filename).innerHTML.toLowerCase()
     if (type == 'image'){
         let image = new Image()
         image.src = '/files'+btoa(unescape(encodeURIComponent(default_path+filename)))
@@ -102,7 +103,7 @@ function make_preview(e){
 
     //cast as text
     
-    else{
+    else if (size.includes(' b') || size.includes(' kb')){
         http = new XMLHttpRequest()
         http.open('GET','/files'+btoa(unescape(encodeURIComponent(default_path+filename))))
         http.onload = function(){
@@ -117,5 +118,8 @@ function make_preview(e){
         }
 
         http.send('')
+    }
+    else{
+        preview_div.innerHTML = '<h1>File size is to big</h1>' 
     }
 }
