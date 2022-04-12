@@ -1,5 +1,5 @@
 # cloud
-my cloud with website using python3.8 for server, bootstrap5 for client and Mysql 8 as data base:
+my cloud with website using python3.8 for server, bootstrap5 for client and Mysql 8 as database:
 
 **HOW TO SETUP:**
 
