@@ -93,6 +93,7 @@ class HttpHandler(BaseHTTPRequestHandler):
         check_codes()
         cookie = SimpleCookie(self.headers.get('Cookie'))
         def send_file(path):
+                path = path.replace("..","")
                 try:
                     if '.' in path.split('/')[-1]:
                         f = open(path,'rb')
