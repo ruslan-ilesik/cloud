@@ -162,7 +162,7 @@ class HttpHandler(BaseHTTPRequestHandler):
         
         elif self.path.startswith('/files'):
             if len(self.path.split('?'))>1 and 'files_list=' in self.path.split('?')[1]:
-                default_path = base64.b64decode(bytes(self.path.split('/files',1)[1].split('?')[0],encoding='utf8')).decode('utf-8')
+                default_path = base64.b64decode(bytes(self.path.split('/files',1)[1].split('?')[0],encoding='utf8')).decode('utf-8').replace("..","")
                 files = json.loads(db.execute('SELECT files FROM links where id = "'+ self.path.split('id=')[1].split('&')[0]+'"')[0][0])
                 file_names = [i.split('/')[-1] for i in files]
                 if default_path == '/' or default_path[1::].split('/')[0] in file_names:           
