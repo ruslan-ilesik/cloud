@@ -17,4 +17,4 @@ my cloud with website using python3.8 for server, bootstrap5 for client and Mysq
 [share page example:](http://cloud.lesikr.com/share?default_path=/&id=preview)
 
 
-Ps: Thanks to PotatoK for spotting file traversal vulnerability.
+Ps: Thanks to [PotatoK](https://github.com/PotatoK123) for spotting file traversal vulnerability.
